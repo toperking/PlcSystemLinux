@@ -1,0 +1,64 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PLC.Views.Page.VHomePageView"
+			 xmlns:vm="using:PLC.ViewModels.Page"
+             x:CompileBindings="True"
+             x:DataType="vm:VHomePageViewModel">
+	<UserControl.Styles>
+		<Style Selector="RepeatButton:pointerover /template/ContentPresenter">
+			<Setter Property="Foreground" Value="Red"/>
+			<Setter Property="Background" Value="LightBlue"/>
+
+		</Style>
+		<Style Selector="RepeatButton:pressed /template/ContentPresenter">
+			<Setter Property="Background" Value="LightGreen"/>
+		</Style>
+		<Style Selector="RepeatButton">
+			<Setter Property="Background" Value="Black"/>
+			<Setter Property="Foreground" Value="White"/>
+			<!--
+				HorizontalContentAlignment="Center" Content="Content Center"
+			-->
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center" />
+			<Setter Property="Content" Value="Content Center"/>
+			<!--
+			Width="80" Height="30"
+			-->
+			<Setter Property="Width" Value="100"/>
+			<Setter Property="Height" Value="30"/>
+		</Style>
+	</UserControl.Styles>
+
+	<Design.DataContext>
+		<vm:VHomePageViewModel />
+	</Design.DataContext>
+
+	<!-- Doing -->
+	<Grid RowDefinitions="*">
+
+		<Border Background="DarkGray" Margin="0" BorderBrush="White" BorderThickness="0">
+			
+		</Border>
+		<Grid ColumnDefinitions="200,*">
+			<Border Background="Beige" Margin="0" BorderBrush="White" BorderThickness="0">
+				<Grid RowDefinitions="50,50,50,50,*">
+					<RepeatButton   Content="Start" Width="200" Height="50" Command="{Binding StartButton}" Background="{Binding ColorBtnStart}" />
+					<RepeatButton  Content="Stop" Width="200" Height="50"  Grid.Row="1"  Command="{Binding StopButton}" Background="{Binding ColorBtnStop}"/>
+					<RepeatButton  Content="Origin" Width="200" Height="50" Grid.Row="2"  Command="{Binding OriginButton}" Background="{Binding ColorBtnOrigin}"/>
+					<RepeatButton  Content="Alram Reset" Width="200" Height="50" Grid.Row="3"  Command="{Binding AlramButton}" Background="{Binding ColorBtnAlram}"/>
+				</Grid>
+			</Border>
+			<Border Background="LightCyan" Margin="0" BorderBrush="White" BorderThickness="0" Grid.Column="1" >
+
+			</Border>
+			
+		</Grid>
+			
+	</Grid>
+	
+	
+</UserControl>

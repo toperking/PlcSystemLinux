@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLC", "PLC\PLC.csproj", "{A66393E0-8939-4E15-A00D-7BDC7B4705DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A66393E0-8939-4E15-A00D-7BDC7B4705DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66393E0-8939-4E15-A00D-7BDC7B4705DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66393E0-8939-4E15-A00D-7BDC7B4705DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66393E0-8939-4E15-A00D-7BDC7B4705DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01D66635-48F8-433C-B1E5-DD86B4F96451}
+	EndGlobalSection
+EndGlobal
